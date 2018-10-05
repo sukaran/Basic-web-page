@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Praveen</title>
+
+  <style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+  */
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block; }
+
+  body {
+    line-height: 1; }
+
+  ol, ul {
+    list-style: none; }
+
+  blockquote, q {
+    quotes: none; }
+
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none; }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+  a {
+    text-decoration: none; }
+
+  img {
+    height: 100%;
+    width: 100%; }
+
+  .wrapper {
+    max-width: 960px;
+    width: 100%;
+    margin: 2rem auto; }
+
+  .center {
+    text-align: center; }
+
+  .right {
+    text-align: right; }
+
+  .color-white {
+    color: #fff; }
+
+  body {
+    font-family: 'Open Sans', sans-serif; }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 300; }
+
+  .user_name {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    vertical-align: bottom;
+    color: #4c3831; }
+
+  .user_value {
+    border: none;
+    border-bottom: 2px solid #9E9E9E;
+    vertical-align: top;
+    line-height: 1.5rem;
+    width: 250px;
+    font-size: 1.2rem;
+    color: #005f56;
+    padding-left: 1rem; }
+    .user_value:focus {
+      outline: none;
+      border-bottom: 2px solid #353535; }
+
+  .details_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 7px 6px 14px 3px #d2cfcfd1;
+    background-color: white;
+    border-radius: 3px; }
+    .details_block:hover {
+      box-shadow: 7px 6px 14px 3px #d6d2d2d1; }
+
+  .user_image {
+    height: 200px; }
+    .user_image img {
+      max-width: 200px;
+      width: 100%; }
+
+  .show_name {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-variant: small-caps; }
+    .show_name a {
+      color: #33435a; }
+
+  .user_info {
+    font-size: 1.2rem;
+    margin: 0.5rem 0; }
+
+  .repo_head {
+    font-size: 2rem;
+    border-bottom: 1px solid;
+    width: 300px;
+    padding: 0.5rem 0;
+    font-weight: 300;
+    color: #023a35;
+    margin: 0 auto; }
+
+  .repos_container {
+    max-width: 500px;
+    width: 100%;
+    margin: 2rem auto; }
+
+  .repo_item {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    background-color: #73cdd8; }
+    .repo_item:nth-child(even) {
+      background-color: #87dce6; }
+    .repo_item:hover {
+      box-shadow: inset 0px 0px 8px 0px #353333; }
+    .repo_item a {
+      color: #2c2a2f; }
+
+  .submit {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    background-color: #023a35;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none; }
+    .submit:hover {
+      background-color: #005f56; }
+
+  @media screen and (max-width: 450px) {
+    .user_name, .user_value {
+      display: block;
+      margin: 1rem auto;
+      text-align: center; }
+
+    .submit {
+      display: inline-block; }
+
+    .details_block {
+      grid-template-columns: 1fr;
+      justify-items: center; }
+
+    .show_details p {
+      text-align: center; } }
+
+  /*# sourceMappingURL=style.css.map */
+  </style>
+</head>
+<body>
+  <div class="info">
+    <div class="show_user_details wrapper">
+      <div class="details_block">
+        <div class="user_image">
+          <img src="https://avatars0.githubusercontent.com/u/29889620?v=4">
+        </div>
+        <div class="show_details">
+          <p class="show_name">
+          <a href="https://github.com/praveen-me" class="name_value">Praveen Kumar Saini</a>
+          </p>
+          <p class="show_repos user_info">
+            <span class="repos_head">Repositories : </span>
+            <span class="repo_value">39</span>
+          </p>
+          <p class="show_follower user_info">
+            <span class="follower_head">Follower : </span>
+            <span class="follower_value">17</span>
+          </p>
+          <p class="show_following user_info">
+            <span class="following_head">Following : </span>
+            <span class="following_value">21</span>
+          </p>
+          <p class="show_bio user_info">
+            <span class="bio_head">Bio : </span>
+            <span class="bio_value">Web Developer/  Thinker / Learner</span>
+          </p>
+        </div>    
+      </div>
+    </div>
+    <div class="repos wrapper">
+      <div class="repos_block">
+        <h3 class="repo_head center">User Repositories</h3>
+        <ul class="repos_container">
+          <li class="repo_item">
+            <span class="repo_no">1</span> - <a href="https://github.com/praveen-me/animal_trading_card">animal_trading_card</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">2</span> - <a href="https://github.com/praveen-me/arcade-game-clone-fend">arcade-game-clone-fend</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">3</span> - <a href="https://github.com/praveen-me/Basic-web-page">Basic-web-page</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">4</span> - <a href="https://github.com/praveen-me/chrome-extension-blog">chrome-extension-blog</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">5</span> - <a href="https://github.com/praveen-me/dart-basics">dart-basics</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">6</span> - <a href="https://github.com/praveen-me/FCC-product-landing-page">FCC-product-landing-page</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">7</span> - <a href="https://github.com/praveen-me/fend-feedreader-project">fend-feedreader-project</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">8</span> - <a href="https://github.com/praveen-me/final_project_html_css">final_project_html_css</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">9</span> - <a href="https://github.com/praveen-me/git-info">git-info</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">10</span> - <a href="https://github.com/praveen-me/github-slideshow">github-slideshow</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">11</span> - <a href="https://github.com/praveen-me/hacktoberfest">hacktoberfest</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">12</span> - <a href="https://github.com/praveen-me/hacktoberfest2018">hacktoberfest2018</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">13</span> - <a href="https://github.com/praveen-me/Halloween-Hacktoberfest">Halloween-Hacktoberfest</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">14</span> - <a href="https://github.com/praveen-me/HELP-NGO">HELP-NGO</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">15</span> - <a href="https://github.com/praveen-me/html_css_practice">html_css_practice</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">16</span> - <a href="https://github.com/praveen-me/intern-project">intern-project</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">17</span> - <a href="https://github.com/praveen-me/javascript-DOM">javascript-DOM</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">18</span> - <a href="https://github.com/praveen-me/jaykay12.github.io">jaykay12.github.io</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">19</span> - <a href="https://github.com/praveen-me/jeevan-rakht">jeevan-rakht</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">20</span> - <a href="https://github.com/praveen-me/jQuery-samples">jQuery-samples</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">21</span> - <a href="https://github.com/praveen-me/js_core">js_core</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">22</span> - <a href="https://github.com/praveen-me/linkedin-clone">linkedin-clone</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">23</span> - <a href="https://github.com/praveen-me/memory-card-game-fend">memory-card-game-fend</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">24</span> - <a href="https://github.com/praveen-me/mockup_article">mockup_article</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">25</span> - <a href="https://github.com/praveen-me/my-travel-plans">my-travel-plans</a>  
+          </li>
+            
+          <li class="repo_item">
+            <span class="repo_no">26</span> - <a href="https://github.com/praveen-me/pixel-art-maker">pixel-art-maker</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">27</span> - <a href="https://github.com/praveen-me/platform-game-js">platform-game-js</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">28</span> - <a href="https://github.com/praveen-me/play-with-canvas">play-with-canvas</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">29</span> - <a href="https://github.com/praveen-me/praveen-me.github.io">praveen-me.github.io</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">30</span> - <a href="https://github.com/praveen-me/PyStudentManger">PyStudentManger</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">31</span> - <a href="https://github.com/praveen-me/sampark">sampark</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">32</span> - <a href="https://github.com/praveen-me/sampark-us">sampark-us</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">33</span> - <a href="https://github.com/praveen-me/sample-college-website">sample-college-website</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">34</span> - <a href="https://github.com/praveen-me/snake-game-js">snake-game-js</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">35</span> - <a href="https://github.com/praveen-me/special-fortnight-chrome-extension">special-fortnight-chrome-extension</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">36</span> - <a href="https://github.com/praveen-me/travel-trivia">travel-trivia</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">37</span> - <a href="https://github.com/praveen-me/tribute_page">tribute_page</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">38</span> - <a href="https://github.com/praveen-me/ud891">ud891</a>  
+          </li>
+          
+          <li class="repo_item">
+            <span class="repo_no">39</span> - <a href="https://github.com/praveen-me/udabuddy">udabuddy</a>  
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
